@@ -17,6 +17,23 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#179800',
+            secondary: '#EFEBE3',
+            black: '#111111',
+          },
+          fontFamily: {
+            sora: [ 'Sora', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+
   <!-- DaisyUI CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
 
@@ -64,13 +81,13 @@
   <title>Grocery Product</title>
 </head>
 
-<body class="font-family">
+<body class="font-sora">
   <header class="bg-gradient-to-b from-[#FFFFFF] to-[#EFEBE3]">
     <!-- Header Menu Item Start -->
     <section class="w-11/12 lg:w-10/12 mx-auto pt-6">
       <div class="flex justify-between items-center font-bold text-2xl">
-        <div>
-          <a class="w-24 lg:w-36" href="index.html">
+        <div class="w-24 md:w-40 lg:w-36">
+          <a class="" href="index.html">
             <img class="w-full" src="c2-assets/logo-header.png" alt="" />
           </a>
         </div>
@@ -86,9 +103,9 @@
             <i class="fa-solid fa-magnifying-glass text-2xl"></i>
             <i class="fa-solid fa-cart-shopping text-2xl"></i>
             <button
-              class="py-3 px-8 border border-[#179800] hover:bg-[#179800] hover:text-white text-[color-accent] rounded-lg duration-1000 zoom">Login</button>
+              class="py-3 px-8 border border-accent hover:bg-accent hover:text-white text-color-accent rounded-lg duration-1000 zoom">Login</button>
             <button
-              class="py-3 px-8 border bg-[#179800] hover:bg-[#17980028] text-white hover:text-black rounded-lg duration-1000 zoom">Register</button>
+              class="py-3 px-8 border bg-accent hover:bg-[#17980028] text-white hover:text-black rounded-lg duration-1000 zoom">Register</button>
           </div>
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
             <i class="fa-solid fa-bars text-3xl"></i>
@@ -102,14 +119,14 @@
       </div>
     </section>
     <!-- Header Menu Item End -->
-    <hr class="border-[1] border-[#179800] mt-3 lg:hidden" />
+    <hr class="border-[1] border-accent mt-3 lg:hidden" />
 
     <!-- Header Content and Header Image Start -->
     <section class="w-11/12 lg:w-10/12 mt-12 lg:mt-24 mx-auto text-center">
-      <h1 class="font-semibold text-3xl lg:text-6xl w-3/4 lg:w-2/5 mx-auto zoom">Freshness <span
-          class="text-[#179800]">You Can Count</span> On, Prices You’ll Love!
+      <h1 class="text-black font-semibold text-3xl lg:text-6xl w-3/4 lg:w-2/5 mx-auto zoom">Freshness <span
+          class="text-accent">You Can Count</span> On, Prices You’ll Love!
       </h1>
-      <p class="lg:w-2/5 mx-auto mt-8 pb-9 text-[#111111]">
+      <p class="lg:w-2/5 mx-auto mt-8 pb-9 text-black">
         Shop your daily essentials at unbeatable prices. From fresh produce to
         pantry staples, we’ve got you covered every day!
       </p>
@@ -122,7 +139,7 @@
 
     <!-- Services Section Start -->
     <section class="w-11/12 lg:w-10/12 mx-auto mt-12 lg:mt-24">
-      <h2 class="font-semibold text-2xl lg:text-4xl text-[#179800]">
+      <h2 class="font-semibold text-2xl lg:text-4xl text-accent">
         Services
       </h2>
 
@@ -132,10 +149,9 @@
           <div class="w-32 h-32 bg-white rounded-full mx-auto">
             <img class="p-6 mx-auto" src="c2-assets/service.png" alt="" />
           </div>
-          <h3 class="mt-6 font-semibold text-2xl zoom">24/7 Services</h3>
-          <p class="mt-3 text-[#111111]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt
+          <h3 class="mt-6 font-semibold text-2xl zoom text-black">24/7 Services</h3>
+          <p class="mt-3 text-black">
+            Our service is available 24/7, so you can shop anytime, day or night, with the assurance that your needs will be met without delay.
           </p>
         </div>
 
@@ -143,10 +159,9 @@
           <div class="w-32 h-32 bg-white rounded-full mx-auto">
             <img class="p-6 mx-auto" src="c2-assets/delivery.png" alt="" />
           </div>
-          <h3 class="mt-6 font-semibold text-2xl zoom">Fast Delivery</h3>
-          <p class="mt-3 text-[#111111]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt
+          <h3 class="mt-6 font-semibold text-2xl zoom text-black">Fast Delivery</h3>
+          <p class="mt-3 text-black">
+            Get your groceries delivered quickly and efficiently, straight to your doorstep, so you can enjoy your fresh products without the wait.
           </p>
         </div>
 
@@ -154,10 +169,9 @@
           <div class="w-32 h-32 bg-white rounded-full mx-auto">
             <img class="p-6 mx-auto" src="c2-assets/healthy.png" alt="" />
           </div>
-          <h3 class="mt-6 font-semibold text-2xl zoom">Healthy Products</h3>
-          <p class="mt-3 text-[#111111]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt
+          <h3 class="mt-6 font-semibold text-2xl zoom text-black">Healthy Products</h3>
+          <p class="mt-3 text-black">
+            We offer a wide range of fresh, nutritious products, carefully selected to help you maintain a healthy and balanced lifestyle.
           </p>
         </div>
 
@@ -170,7 +184,7 @@
     <!-- My Custom Section Start -->
     <section class="mt-12 lg:mt-24 py-16 bg-slate-300">
      <div class="w-11/12 lg:w-10/12 mx-auto">
-      <h2 class="font-semibold text-2xl lg:text-4xl text-[#179800]">Shop By Category</h2>
+      <h2 class="font-semibold text-2xl lg:text-4xl text-accent">Shop By Category</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-20 mb-20">
 
         <div class="glass text-center p-8 rounded-2xl">
@@ -179,7 +193,7 @@
           </div>
           <div>
             <h3 class="mt-6 font-semibold text-2xl zoom">Fruits & Vegetables </h3>
-          <p class="mt-3 text-[#111111]">Fresh, organic produce sourced daily for quality and nutrition. Shop seasonal picks and exotic varieties.</p>
+          <p class="mt-3 text-black">Fresh, organic produce sourced daily for quality and nutrition. Shop seasonal picks and exotic varieties.</p>
           </div>
         </div>
 
@@ -190,7 +204,7 @@
           </div>
           <div>
             <h3 class="mt-6 font-semibold text-2xl zoom">Dairy & Eggs</h3>
-          <p class="mt-3 text-[#111111]">High-quality milk, cheese, yogurt, and fresh eggs from trusted farms. Enjoy rich taste and freshness.</p>
+          <p class="mt-3 text-black">High-quality milk, cheese, yogurt, and fresh eggs from trusted farms. Enjoy rich taste and freshness.</p>
           </div>
         </div>
 
@@ -201,7 +215,7 @@
           </div>
           <div>
             <h3 class="mt-6 font-semibold text-2xl zoom">Beverages</h3>
-          <p class="mt-3 text-[#111111]">Refreshing juices, soft drinks, and healthy options. Find energy-boosting and hydrating drinks here.</p>
+          <p class="mt-3 text-black">Refreshing juices, soft drinks, and healthy options. Find energy-boosting and hydrating drinks here.</p>
           </div>
         </div>
       </div>
@@ -214,7 +228,7 @@
     <!-- Popular Products Section Start -->
     <section class="bg-[#EFEBE3]">
       <div class="w-11/12 lg:w-10/12 mx-auto pt-12 lg:pt-36">
-        <h2 class="font-semibold text-2xl lg:text-4xl text-[#179800]">Popular Products </h2>
+        <h2 class="font-semibold text-2xl lg:text-4xl text-accent">Popular Products </h2>
         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[420px_1fr] gap-8 mt-8 lg:mt-12 lg:pb-36">
           <!-- Left Side Start -->
           <div class="bg-gradient-to-br from-[#53db3a] to-white pl-7 pt-10 rounded-lg">
@@ -348,7 +362,7 @@
 
     <!-- Arrival & Offers Section Start -->
     <section class="w-11/12 lg:w-10/12 mx-auto pt-12 lg:pt-36 pb-44">
-      <h2 class="font-semibold text-2xl lg:text-4xl text-[#179800]">
+      <h2 class="font-semibold text-2xl lg:text-4xl text-accent">
         Arrival & Offers
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-5 mt-12">
@@ -389,7 +403,7 @@
   </main>
 
   <!-- Footer Section Start -->
-  <footer class="bg-[#179800] pb-12">
+  <footer class="bg-accent pb-12">
 
     <!-- Grocery News Sections Start -->
     <section class="w-11/12 lg:w-10/12 mx-auto mt-12 lg:mt-40 relative -top-60">
@@ -399,12 +413,12 @@
             <img class="w-full zoom" src="c2-assets/vegetable-busket.png" alt="" />
           </div>
           <div class="text-center lg:text-left">
-            <h1 class="text-2xl lg:text-4xl font-semibold text-[#179800]">Get Grocery News!</h1>
+            <h1 class="text-2xl lg:text-4xl font-semibold text-accent">Get Grocery News!</h1>
             <p class="pt-5 text-[1rem] lg:text-xl">Exclusive training tips, ticks, product deals and more.</p>
             <input type="text" placeholder="Enter email...."
               class="mt-5 lg:mt-9 input rounded-lg w-10/12 lg:w-96 h-14 text-xl px-5"><br>
             <button
-              class="mt-3 py-3 px-8 border bg-[#179800] hover:bg-[#17980028] text-white hover:text-black rounded-lg duration-1000 zoom">Subscribe</button>
+              class="mt-3 py-3 px-8 border bg-accent hover:bg-[#17980028] text-white hover:text-black rounded-lg duration-1000 zoom">Subscribe</button>
           </div>
         </div>
       </div>
